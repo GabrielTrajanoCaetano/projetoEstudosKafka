@@ -15,7 +15,17 @@ spring:
     properties:
       hibernate:
         format_sql: true
+springdoc:
+  swagger-ui:
+    path: /order_controller.html
+  api-docs:
+    path: /order_controller
+  packagesToScan: io.github.projetoparadesenvolvimento.icompras.produtos
+
 
 
 server:
   port: 8081
+
+
+
