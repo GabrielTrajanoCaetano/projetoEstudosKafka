@@ -1,7 +1,7 @@
 
 spring:
   application:
-    name:produtos
+    name: produtos
   datasource:
     url: jdbc:postgresql://localhost:5555/icomprasprodutos
     username: postgres
