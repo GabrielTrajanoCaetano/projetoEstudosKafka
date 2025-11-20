@@ -33,6 +33,8 @@ public interface PedidoMapper {
         BigDecimal total = calcularTotal(pedido);
 
         pedido.setTotal(total);
+
+        pedido.getItens().forEach(item -> item.setPedido(pedido));
     }
 
     private static BigDecimal calcularTotal(Pedido pedido) {

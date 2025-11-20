@@ -12,11 +12,13 @@ import org.springframework.stereotype.Service;
 public class PedidoService {
 
     private final PedidoRepository pedidoRepository;
-    private final ItemPedidoRepository ItemPedidoRepository;
+    private final ItemPedidoRepository itemPedidoRepository;
     private final PedidoValidator pedidoValidator;
 
     public Pedido criarPedido(Pedido pedido){
-        return null;
+        pedidoRepository.save(pedido);
+        itemPedidoRepository.saveAll(pedido.getItens());
+        return pedido;
     }
 
 }
