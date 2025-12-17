@@ -43,7 +43,7 @@ public class ProdutoController {
     })
 
     @GetMapping("/{codigo}")
-    public ResponseEntity<Produto> buscarProdutoPeloId(@PathVariable("codigo") Long codigo){
+    public ResponseEntity<Produto> obterDados(@PathVariable("codigo") Long codigo){
         log.info("Produto encontrado, codigo solicitado: {} ",codigo);
         return service
                 .obterPorCodigo(codigo)
